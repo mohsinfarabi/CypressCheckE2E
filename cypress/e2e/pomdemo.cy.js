@@ -14,6 +14,8 @@ describe('All Login Tests',()=>{
         loginPage.clickLogin()
     
         cy.get('#welcome').click()
+
+        cy.screenshot('successful login')
     
     })
     
@@ -23,7 +25,9 @@ describe('All Login Tests',()=>{
         loginPage.enterPassword('admin123')
         loginPage.clickLogin()
     
+        cy.screenshot('invalid credentials')
+
         cy.get('#welcome').click()
-        
+    
     })
 })
